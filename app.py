@@ -9,4 +9,12 @@ db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
-     return render_template("index.html") 
+     return render_template("index.html")
+
+@app.route("/keskiarvo")
+def keskiarvo():
+     return render_template("keskiarvo.html")
+
+@app.route("/tarkkaosuus")
+def tarkkaosuus():
+     return render_template("tarkkaosuus.html") 

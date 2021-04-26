@@ -1,0 +1,104 @@
+<div style="margin: auto; max-width: 20%;">
+    <h1>Keskiarvo laskuri</h1>
+
+    <div>
+        Mökin hinta: <br>
+        <input type="number" id="hinta" min="0">
+        <bR><br>
+        <div id="nights_div">
+            <input type="hidden" id="night_count" min="1" max="31">
+        </div>
+        <br><br>
+        <div id="items">
+        </div>
+        <br>
+        <input type="hidden" value="Laske" id="laske">
+        <br>
+        <br>
+        <div id="tulos">
+
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    var night_count = document.getElementById("night_count");
+    var nights_div = document.getElementById("nights_div");
+    var items = document.getElementById("items");
+    var tulos = document.getElementById("tulos");
+    var br = document.createElement("br");
+
+    var hinta = document.getElementById("hinta")
+    hinta.addEventListener("input", event => {
+        if (hinta.value > 0) {
+            nights_div.innerHTML = "Öiden määrä: "
+            // nights_div.appendChild(br)
+            night_count.type = "number"
+            nights_div.appendChild(night_count)
+        }else{
+            nights_div.innerHTML = ""
+            night_count.type = "hidden"
+        }
+    })
+    night_count.addEventListener("input", event => {
+        const target = event.currentTarget;
+        value = target.value;
+        if (value > 31){
+            value = 31
+        }
+        // console.log(value)
+        items.innerHTML = "Henkilö määrät per yö:";
+        items.appendChild(br)
+        for (let i = value; i > 0; i--) {
+            if (i == 1){
+                items.innerHTML += i + " yö : "
+            }
+            else
+            {
+                items.innerHTML += i + " yötä: "
+            }
+            var input = document.createElement("input");
+            input.type = "number"
+            items.appendChild(input);
+            items.appendChild(br)
+        }
+        // for (let i = 1; i <= value; i++){
+        //     items.innerHTML += "Yö " + i + " "
+        //     var input = document.createElement("input");
+        //     input.type = "number"
+        //     items.appendChild(input);
+        //     items.appendChild(br)
+        // }
+        var submit = document.getElementById("laske")
+        submit.type = "submit"
+    })
+    document.getElementById("laske").addEventListener("click", function(){
+        console.log("LASKE");
+        maarat = items.children;
+        var lista = []
+        var count = document.getElementById("night_count").value;
+        for (i = 0; i < maarat.length; i++){
+            if (maarat[i].type == "number"){
+                console.log(count)
+                lista.push(maarat[i].value * count)
+                count -= 1
+            }
+        }
+
+        console.log(lista)
+        tulos.innerHTML = "Hinnat per henkilö (€):"
+        tulos.appendChild(br)
+        var hinta = document.getElementById("hinta").value;
+        var one_night_price = hinta / lista.reduce((a, b) => a + b, 0)
+        console.log(one_night_price)
+        for (let i = 1; i <= night_count.value; i++) {
+            tulos.innerHTML += "Yö " + i + ": "
+            euroa = i * one_night_price
+            console.log(euroa)
+            console.log(i)
+            tulos.innerHTML += Math.round(euroa * 100) / 100
+            tulos.appendChild(br)
+        }
+    });
+</script>
