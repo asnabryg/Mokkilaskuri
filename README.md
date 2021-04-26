@@ -1,5 +1,5 @@
 # Mökkilaskuri
-Tällä nettisuvlla voidaan laskea mökkireissun maksujako ihmisten välillä.  
+Tällä nettisivlla voidaan laskea mökkireissun maksujako ihmisten välillä.  
 Osoite: https://mokkilaskuri.herokuapp.com/
 
 ## Laskurit:
@@ -14,7 +14,7 @@ Tämä on usein vain muutamia senttejä korkeintaan pari euroa. Riippuu tosin pa
 Jos kaikki olisivat koko mökkiajan, niin tämä laskuri antaa oikean tuloksen nopeasti.
 
 ### Tarkkaosuus:
-Tämä laskuri on vielä kesken. Mutta laskuri pyytää jokaisen ihmisen tulo- ja lähtöpäivän sekä nimimerkin. Laksuri laskee jokaiselle oikean summan mitä joutuu maksamaan, ja näin kukaan ei joudu maksamaan ylimäärästä tai maksa liian vähän muihin verrattuna. Minuksena on, että jos tulee paljon porukkaa, pitää jokaisen ihmisen päivät merkata tarkkaan laskuriin.
+Tämä laskuri on vielä kesken. Mutta laskuri pyytää jokaisen ihmisen tulo- ja lähtöpäivän sekä nimimerkin. Laskuri laskee jokaiselle oikean summan mitä joutuu maksamaan, ja näin kukaan ei joudu maksamaan ylimääräistä tai maksa liian vähän muihin verrattuna. Miinuksena on, että jos tulee paljon porukkaa, pitää jokaisen ihmisen läsnäolopäivät merkata tarkkaan laskuriin.
   
   
   
