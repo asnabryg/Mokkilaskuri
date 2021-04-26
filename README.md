@@ -5,7 +5,7 @@ Osoite: https://mokkilaskuri.herokuapp.com/
 ## Laskurit:
 
 ### Keskiarvo:
-Tällä voidaan laskea nopeasti ja vaivattomasti monen eri päivän mökkireisuun maksujakauman, vaikka jotkin olisivatkin
+Tällä voidaan laskea nopeasti ja vaivattomasti monen eri päivän mökkireisuun maksujakauma, vaikka jotkin reisuun lähtijät olisivatkin
 eri päivinä/öinä mukana.
 
 Minus puolena on, että maksu ei jokaiselle ole välttämättä oikea summa. Jos esim kahdella eri päivällä on eri määrä porukkaa, laksuri ei osaa antaa oikeaa tulosta
