@@ -1,5 +1,5 @@
 # Mökkilaskuri
-Tällä nettisivlla voidaan laskea mökkireissun maksujako ihmisten välillä.  
+Tällä nettisivlla voidaan laskea mökkireissun maksujako ihmisten välillä. Sivusto on vielä hyvin kesken eräinen.
 Osoite: https://mokkilaskuri.herokuapp.com/
 
 ## Laskurit:
@@ -19,4 +19,10 @@ Tämä laskuri on vielä kesken. Mutta laskuri pyytää jokaisen ihmisen tulo- j
   
   
 Molemmat laskurit eivät kuitenkaa "hävitä" rahaa oikeasta summasta. Eli kaikkien ihmisten yhteissumma on oikea mökin hinta.
-Osoite: https://mokkilaskuri.herokuapp.com/
+
+## Muuta:
+Nettisivu ei valitettavasti toimi (ainakaan tällähetkellä) ilman, että Javascripti on pistetty pois päältä. Laskenta tapahtuu dynaamisesti, kun käyttäjä syöttää tietoja.
+Laskut tapahtuvat Javascriptillä.
+Nettisivujen siirtymät on toteutettu Pythonia ja Flaskia käyttämällä. Nettisivun isännöi Heroku.com  
+
+Jatkokehitys ideana on, että voidaan tallentaa Tarkkaosuus laskurin tulokset ylös, mutta vain itselle näkyviksi. Tämä voisi toimia, että se tallenetaan evästeisiin tai Herokuun SQL tietokantaa käyttäen, jolloin kyllä tarvittaisiin myös sivulle jonkinlainen kirjautumis toiminto.
