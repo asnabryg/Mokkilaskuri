@@ -60,6 +60,7 @@
             }
             var input = document.createElement("input");
             input.type = "number"
+            input.min = 0
             items.appendChild(input);
             items.appendChild(br)
         }
@@ -80,7 +81,10 @@
         var count = document.getElementById("night_count").value;
         for (i = 0; i < maarat.length; i++){
             if (maarat[i].type == "number"){
-                console.log(count)
+                // console.log(count)
+                if (maarat[i].value < 0){
+                    maarat[i].value = 0
+                }
                 lista.push(maarat[i].value * count)
                 count -= 1
             }
@@ -92,11 +96,16 @@
         var hinta = document.getElementById("hinta").value;
         var one_night_price = hinta / lista.reduce((a, b) => a + b, 0)
         console.log(one_night_price)
-        for (let i = 1; i <= night_count.value; i++) {
+        index = -1
+        for (let i = night_count.value; i >= 1; i--) {
+            index += 1
+            if (lista[index] == 0){
+                continue
+            }
             tulos.innerHTML += "Yö " + i + ": "
             euroa = i * one_night_price
-            console.log(euroa)
-            console.log(i)
+            // console.log(euroa)
+            // console.log(i)
             tulos.innerHTML += Math.round(euroa * 100) / 100
             tulos.appendChild(br)
         }
